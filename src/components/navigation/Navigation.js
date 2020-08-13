@@ -12,6 +12,7 @@ function Navigation({ onRouteChange, isSignedIn }) {
     } else {
         return (
             <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
+            <Logo />
             <p onClick={() => onRouteChange('signin')} className='fa3 dim pointer pa3 black underline link'>Sign In</p>
 
             <p onClick={() => onRouteChange('register')} className='fa3 dim pointer pa3 black underline link'>Register</p>
