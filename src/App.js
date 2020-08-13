@@ -6,6 +6,7 @@ import SignIn from './components/signin/SignIn.js';
 import Register from './components/register/Register.js';
 import ImageLinkForm from './components/imagelinkform/ImageLinkForm.js';
 import FaceRecognition from './components/faceRecognition/FaceRecognition.js';
+import Footer from './components/footer/Footer.js';
 import Rank from './components/rank/Rank.js';
 import Particles from 'react-particles-js';
 
@@ -155,6 +156,7 @@ class App extends Component {
                     <FaceRecognition boxes={boxes} imageURL={imageURL}/>
                   </div>
             }
+            
           </div>
         );
     }

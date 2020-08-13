@@ -23,3 +23,15 @@ radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 
 #fb5;
 background-size: 20px 20px;
 }
+
+
+@media (max-width: 900px) {
+    .mh7 {
+        margin-left: 2rem !important;
+        margin-right: 2rem !important;
+    }
+    .f4 {
+        font-size: 1rem !important;
+        text-align: justify !important;
+    }
+}

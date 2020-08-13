@@ -1,8 +1,9 @@
 import React from 'react';
+import './Rank.css';
 
 function Rank({ username, entries }) {
     return(
-        <div>
+        <div className='mt4'>
             <div className='white f3'>
             {`${username}, your entry count is...`}
             </div>

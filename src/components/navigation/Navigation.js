@@ -6,16 +6,16 @@ function Navigation({ onRouteChange, isSignedIn }) {
         return (
             <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
             <Logo />
-            <p onClick={() => onRouteChange('signin')} className='fa3 dim pointer pa3 black underline link'>Sign Out</p>
+            <p className='fa3 pa3 black underline '><span onClick={() => onRouteChange('signin')} className='pointer dim link'>Sign Out</span></p>
             </nav>
         )
     } else {
         return (
             <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
             <Logo />
-            <p onClick={() => onRouteChange('signin')} className='fa3 dim pointer pa3 black underline link'>Sign In</p>
+            <p className='fa3 pa2 black underline '><span onClick={() => onRouteChange('signin')} className='pointer dim link'>Sign In</span></p>
 
-            <p onClick={() => onRouteChange('register')} className='fa3 dim pointer pa3 black underline link'>Register</p>
+            <p className='fa3 pa2 pr3 black underline '><span onClick={() => onRouteChange('register')} className='pointer dim link'>Register</span></p>
             </nav>
         )
     }
