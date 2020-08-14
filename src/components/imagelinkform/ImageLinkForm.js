@@ -13,7 +13,7 @@ function ImageLinkForm({ onInputChange, onButtonSubmit }) {
             </div>
             <p className='f4'>
             <p className='mh7'>This SmartBrain App will detect faces in your pictures! Give it a try!</p>
-            <p className='mh7'>Search for a picture. Right click and select Copy Image Address on PC or open the image in a new tab and copy the url in the url box on mobile. Paste it in the box below and hit Detect!</p>
+            <p className='mh7'>Search for a picture. Right click and select Copy Image Address on PC or open the image in a new tab and copy the url in the url box on mobile. Paste it in the box above and hit Detect!</p>
             </p>
         </div>
     )
