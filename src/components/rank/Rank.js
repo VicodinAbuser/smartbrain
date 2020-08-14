@@ -1,14 +1,14 @@
 import React from 'react';
 import './Rank.css';
 
-function Rank({ username, entries }) {
+function Rank({ username, faces }) {
     return(
         <div className='mt4'>
             <div className='white f3'>
-            {`${username}, your entry count is...`}
+            {`${username}, the number of faces detected is...`}
             </div>
             <div className='white f1'>
-            {entries}
+            {faces}
             </div>
         </div>
     )

@@ -64,18 +64,21 @@ class App extends Component {
 
     calculateFaceLocation = (data) => {
         const faceBoxes = []
-        data.outputs[0].data.regions.forEach((region, i) => {
-            const clarifaiFace = region.region_info.bounding_box;
-            const image = document.getElementById('inputimage');
-            const width = Number(image.width);
-            const height = Number(image.height);
-            faceBoxes.push({
-                leftColumn: clarifaiFace.left_col*width,
-                rightColumn: width - clarifaiFace.right_col*width,
-                topRow: clarifaiFace.top_row*height,
-                bottomRow: height - clarifaiFace.bottom_row*height
+        if(data.outputs[0].data.regions) {
+            data.outputs[0].data.regions.forEach((region, i) => {
+                const clarifaiFace = region.region_info.bounding_box;
+                const image = document.getElementById('inputimage');
+                const width = Number(image.width);
+                const height = Number(image.height);
+                faceBoxes.push({
+                    leftColumn: clarifaiFace.left_col*width,
+                    rightColumn: width - clarifaiFace.right_col*width,
+                    topRow: clarifaiFace.top_row*height,
+                    bottomRow: height - clarifaiFace.bottom_row*height
+                });
             });
-        });
+        }
+
         return faceBoxes;
 
     }
@@ -100,6 +103,7 @@ class App extends Component {
         })
         .then(response => response.json())
         .then((response) => {
+            console.log(response)
             if(response) {
                 fetch('https://shielded-temple-15977.herokuapp.com/image', {
                     method: 'put',
@@ -151,12 +155,12 @@ class App extends Component {
                 :
                   <div>
 
-                    <Rank username={user.name} entries={user.entries}/>
+                    <Rank username={user.name} faces={boxes.length}/>
                     <ImageLinkForm onButtonSubmit={this.onSubmit} onInputChange={this.onInputChange} />
                     <FaceRecognition boxes={boxes} imageURL={imageURL}/>
                   </div>
             }
-            
+
           </div>
         );
     }
